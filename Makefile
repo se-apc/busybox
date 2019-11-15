@@ -288,22 +288,22 @@ MAKEFLAGS += -rR
 
 # Make variables (CC, etc...)
 
-AS		= $(CROSS_COMPILE)as
-CC		= $(CROSS_COMPILE)gcc
-LD		= $(CC) -nostdlib
-CPP		= $(CC) -E
-AR		= $(CROSS_COMPILE)ar
-NM		= $(CROSS_COMPILE)nm
-STRIP		= $(CROSS_COMPILE)strip
-OBJCOPY		= $(CROSS_COMPILE)objcopy
-OBJDUMP		= $(CROSS_COMPILE)objdump
+AS		?= $(CROSS_COMPILE)as
+CC		?= $(CROSS_COMPILE)gcc
+LD		?= $(CC) -nostdlib
+CPP		?= $(CC) -E
+AR		?= $(CROSS_COMPILE)ar
+NM		?= $(CROSS_COMPILE)nm
+STRIP		?= $(CROSS_COMPILE)strip
+OBJCOPY		?= $(CROSS_COMPILE)objcopy
+OBJDUMP		?= $(CROSS_COMPILE)objdump
 PKG_CONFIG	?= $(CROSS_COMPILE)pkg-config
-AWK		= awk
-GENKSYMS	= scripts/genksyms/genksyms
-DEPMOD		= /sbin/depmod
-KALLSYMS	= scripts/kallsyms
-PERL		= perl
-CHECK		= sparse
+AWK		?= awk
+GENKSYMS	?= scripts/genksyms/genksyms
+DEPMOD		?= /sbin/depmod
+KALLSYMS	?= scripts/kallsyms
+PERL		?= perl
+CHECK		?= sparse
 
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ -Wbitwise $(CF)
 MODFLAGS	= -DMODULE
