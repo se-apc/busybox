@@ -12,3 +12,4 @@ CFLAGS="-I$SDKTARGETSYSROOT/usr/include/ $CFLAGS"
 make
 
 install -T ./busybox $INSTALL_DIR/busybox
+echo "INSTALL_DIR = $INSTALL_DIR"
